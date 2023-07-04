@@ -1,0 +1,66 @@
+\capitulo{5}{Aspectos relevantes del desarrollo del proyecto}
+
+\subsection{Motivación del proyecto}
+La idea del proyecto nace de mi experiencia con una persona cercana que, algunos años atrás, fue diagnosticada con EM, lo que devino en un sinnúmero de desafíos entre los que se encontraba el acceso a una cobertura de salud de calidad. Esto me motivó a indagar sobre la EM, hasta descubrir que Uruguay presenta el índice de prevalencia más alto de Latinoamérica. Más adelante me di cuenta de que existen recursos disponibles en la matriz de protección social que son desconocidos para el público general dada la ausencia de una fuente centralizada de información que reúna toda la data de manera sistematizada y actualizada. 
+Ante tal panorama, me planteé el desafío de poner mi bagaje académico y laboral al servicio de la comunidad de pacientes con EM, en mi país, y desarrollar una solución, siendo la elaboración de este trabajo final de grado la oportunidad idónea para ello. Es decir, para crear una herramienta que sirva de apoyo para estas personas y que les ayude a sobreponerse a las dificultades con las que puedan toparse dentro del sistema de salud, así como autogestionar su enfermedad. El plan es que en base al backend desarrollado para este TFG se pueda generar a futuro una aplicación que donaré a la organización sin fines de lucro EMUR (Esclerosis Múltiple Uruguay).
+
+\subsection{Formación necesaria}
+Por otro lado, pese a tener una amplia base de conocimientos informáticos, adquiridos tanto de forma académica como por experiencia laboral, fue necesario dedicar una cantidad sustancial de horas al entrenamiento de nuevas habilidades, así como también a la investigación y recolección de información que ayudase al desarrollo del proyecto. En concreto, tuve que profundizar en lo relacionado con la estructura hexagonal, el manejo de Test Automatizados con Postman, la documentación generada con Swagger y las migraciones de bases de datos para versionar cambios sobre las mismas.\\
+En cuanto a infraestructura, fue necesario aprender y realizar integraciones continuas en GitHub para así poder desplegar el código mediante la publicación de éste al repositorio, mientras que, en lo referente a la gestión del proyecto, tuve que aprender a manejar la aplicación Jira, para así poder analizar y evaluar la ejecución del proyecto.
+En relación con lo anterior, para la arquitectura hexagonal, tomé tres curso relacionados con el tema: “Hexagonal Architecture in Go”, de la plataforma Medium; “Golang. Intermedio”, de la plataforma Platzi; y “Curso de Go. Arquitectura Hexagonal”, de la plataforma Hotmart; mientras que para la integración continua en GitHub recurrí a YouTube y blogs especializados. Para finalizar, es importante mencionar que adquirir todos los conocimientos y habilidades antes mencionadas fue un reto interesante que me permitió ampliar nociones previas y mejorar con ello mi perfil técnico.
+
+\subsection{Contexto Legal}
+
+Este proyecto exigió que me acercara a la legislación uruguaya en relación al manejo de datos personales a nivel nacional.
+
+La normativa vigente se encuentra contenida en: la ley N° 18.331, del año 2008; la ley N° 18.719, del año 2011; el decreto N° 664/008, del año 2008; el decreto N° 414/009, del año 2009.
+
+En lo referente a la ley N° 18.331, el artículo 5 establece los principios generales a los que deben apegarse los responsables, públicos o privados, del manejo de datos personales, siendo estos: legalidad, veracidad, finalidad, previo consentimiento informado, seguridad de los datos, reserva y responsabilidad. Estos principios funcionan también como parámetros a considerar en el diseño de aplicaciones en las que sea necesaria la recolección y manejo de datos de usuarios.
+ 
+A este respecto, según lo establecido en el artículo 8 de dicha ley, el principio de finalidad hace referencia a que los datos recolectados deben ser utilizados única y exclusivamente con los fines previstos y que ello debe serle informado al titular. Es decir, no pueden utilizarse con propósitos distintos a aquellos que motivaron su obtención en un principio. Esto se relaciona a su vez con lo planteado en el artículo 9, sobre el previo consentimiento informado, en donde se expone que el titular debe ser comunicado del manejo que se les dará a sus datos, y de su propósito, para que luego éste decida si consentir o no.
+
+A su vez, el artículo 13, sobre el derecho de información al tratamiento y recolección de datos, profundiza en lo establecido en el artículo 9, e indica que cuando se recolecten datos personales, al titular se le deberá informar, de manera explícita y detallada: el fin con el que se recolectan los datos, quién es el encargado de velar por ellos y manipularlos, cuáles datos son obligatorios y cuáles no, las consecuencias de proporcionar sus datos y qué puede ocurrir si no lo hace, así como si los datos serán transferidos a terceros.
+
+Por otro lado, el artículo 10, sobre la seguridad de los datos, establece que, una vez recopilada la información y almacenada en la base de datos respectiva, el responsable debe adoptar e implementar las medidas de seguridad pertinentes para garantizar la confidencialidad de los datos y la invulnerabilidad de la base de datos. Ello con el fin de evitar la violación a la privacidad, o alteraciones en la información como: adulteración, eliminación, consulta o tratamiento no autorizado, o desviaciones.
+
+En relación con lo anterior, dicha ley, en su capítulo IV sobre los datos especialmente protegidos, establece, en el artículo 19, que los datos relativos a la salud, manejados por entes vinculados al área sanitaria y ciencias de la salud, deberán respetar en todo momento los principios del secreto profesional, procurando proteger la información referente al estado de salud física o mental de los pacientes. Así, este artículo destaca especialmente entre el resto por su relación directa con la temática del presente proyecto y con el backend desarrollado en la que se manejará información sensible sobre las personas con EM.
+
+Esto se ve reforzado por lo expuesto en el artículo 158 de la ley N° 18.719, en donde se indica que las personas, físicas o jurídicas, que intervengan o lleven a cabo actividades relacionadas con la recolección y manejo de datos personales, están en la obligación de preservar el secreto y confidencialidad de la información suministrada por los titulares. Para ello se deben implementar las medidas necesarios que garanticen un óptimo nivel de seguridad e invulnerabilidad de la base de datos en donde se encuentra alojada la información.
+
+Asimismo, volviendo a la ley 18.331, el artículo 15, sobre el derecho de rectificación, actualización, inclusión o supresión, detalla que cada persona, natural o jurídica, que hubiese proporcionado sus datos para cualquier fin, puede solicitar al responsable de la base de datos, en cualquier momento, la rectificación, actualización, inclusión o supresión de la información. Además, establece que, de no hacerse la modificación solicitada por el titular, éste podrá emprender medidas legales contra el responsable en pro del resguardo de sus intereses. Entonces, el backend desarrollador cuenta con los medios necesarios para que los usuarios puedan visualizar y modificar sus datos.
+
+Por último, se tienen los artículos 28 y 29, junto con el decreto N° 664/008, sobre la creación del registro de bases de datos personales, que establecen la obligación que tienen los responsables de las bases de datos de registrarse ante el organismo competente, y de apegarse a la regulación de dicho organismo. Así, se deberá especificar, entre otros datos: identificación de la base de datos y su responsable, naturaleza de los datos que contiene, procedimiento de obtención y tratamiento de la información, medidas de seguridad implementadas, destino de los datos en caso de que sean transferidos a terceros, tiempo de conservación de los datos, y las formas y condiciones en que los titulares pueden acceder y modificar los datos proporcionados.
+
+El decreto N° 414/009 mantiene coherencia con lo anterior. Su artículo 1, establece quién será objeto de protección haciendo referencia a todo aquella persona física que proporcione cualquier tipo de información sobre sí misma. El artículo 2 indica que el régimen de protección de datos personales aplica a las actividades de recolección, registro y tratamiento de información personal. De igual forma, en los artículos 5 y 6 expone lo referente al consentimiento informado para la recolección y tratamiento de datos, de acuerdo con lo cual se le debe informar al titular de la finalidad de los datos y el tipo de actividad que realiza el responsable de los datos. Asimismo, se establece que se le deberá facilitar un medio sencillo, claro y gratuito para que el titular exprese su consentimiento o decline. 
+
+Por otro lado, en su título II, este decreto detalla lo referente a los derechos de los titulares de los datos, señalando el derecho a la modificación de la información proporcionada en cualquier momento, bien sea para rectificar, actualizar, incluir o suprimir datos. En el resto del decreto se mencionan nuevamente las obligaciones del responsable sobre el registro de la base de datos ante el órgano competente, y las características, derechos, deberes y ámbito de acción del órgano de control.
+
+\subsubsection{Protección de datos}
+
+Se implementó una lógica de programación especifica para encriptar los campos de datos “First Name”, “Last Name” y “Profile Image”, evitando asi que ningún usuario administrador, o ningún usuario mal intencionado, logre acceder la información privada de los pacientes con Esclerosis Múltiple. En tanto, el método de encriptación es no determinista, lo que implica que la encriptación es aleatoria, con lo cual si un mismo dato se encripta dos veces la salida generada será distinta cada vez,  lo que dificulta conocer el contenido. Tal encriptación se desarrolló mediante el algoritmo de AES (Advanced Ecryption Standard), en Golang, siguiendo los siguientes pasos:
+
+\begin{itemize}
+\tightlist
+\item
+Primeramente, el texto se convierte en un slice de bytes con el nombre plaintext.
+
+\item Luego, se crea un nuevo bloque de cifrado AES utilizando una clave generada que se aloja en las variables de entorno con el nombre de ENCRYPTION\_KEY.
+\item En tercer lugar, se reserva espacio de memoria para la variable ciphertext, donde se almacenará el resultado de dicha encriptación.
+\item Seguidamente, se genera un vector de inicialización que se guarda en la variable ciphertext, creada previamente.
+\item Después, se crea un flujo de cifrado utilizando el bloque AES y el vector de inicialización para más adelante generar el modo de cifrado CFB (Cipher Feedback).
+\item Una vez que se tiene el flujo se procede a cifrar los bytes del texto original y se codifica a base64 usando URL Encoding, para asegurar la el guardado.
+\item 
+Por último, se devuelve el texto cifrado. 
+\end{itemize}
+
+Asimismo, a continuación se detallan los pasos que lleva a cabo el algoritmo para desencriptar:
+
+\begin{itemize}
+\tightlist
+\item
+ Se inicia desencriptando desde base 64.
+\item Seguidamente, se crea un bloque de cifrado AES usando la misma clave utilizada para encriptar.
+\item Luego, se verifican los datos encriptados para ver si tienen la longitud suficiente para contener un bloque de AES.
+\item Después, se extrae el vector de inicialización y se crea el bloque de descifrado, usando AES y el vector de inicialización.
+\item Y, por último, se desencriptan los datos y se devuelve el texto desencriptado.
+\end{itemize}

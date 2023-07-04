@@ -1,0 +1,172 @@
+% Caso de Uso 49 -> Crear un servicio en el mapa
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.2\columnwidth} p{0.8\columnwidth} }
+		\toprule
+		\textbf{CU-49}    & \textbf{Crear un servicio en el mapa}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Roberto Fabián Delgado Pense \\
+		\textbf{Requisitos asociados} & RF-13.1 \\ 
+		\textbf{Descripción}          & Permite a los usuario administradores crear servicios en el mapa. \\
+		\textbf{Precondición}         & El usuario tiene permiso de administrador. \\  
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El sistema recibe una solicitud HTTP para crear un servicio en el mapa.
+                \item El sistema verifica que el usuario que realiza la solicitud se encuentre autenticado.
+                \item El sistema valida la solicitud y extrae el nombre, latitud, longitud, tipo, horas disponible y teléfono.
+                \item El sistema crea el nuevo servicio del mapa en la base de datos.
+                \item El sistema devuelve una respuesta HTTP con el código 200 (OK) y los datos insertados.         
+            \end{enumerate}\\
+		\textbf{Postcondición}        & El servicio del mapa fue creado en la base de datos. \\
+		\textbf{Excepciones}          & 
+              \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+   			\item Si el usuario no se encuentra autenticado, o no es usuario administrador, el sistema devuelve una                 respuesta HTTP con el código 401 (No autorizado) y un mensaje.
+                \item   Si el servicio no pudo ser creado en la base de datos, el sistema devuelve un                           una respuesta HTTP con el código 500 (Error interno del servidor) y un mensaje. 
+            \end{enumerate}\\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-49 Crear un servicio en el mapa.}
+\end{table}
+
+% Caso de Uso 50 -> Obtener todos los servicios para el mapa
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.2\columnwidth} p{0.8\columnwidth} }
+		\toprule
+		\textbf{CU-50}    & \textbf{ Obtener todos los servicios del mapa}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Roberto Fabián Delgado Pense \\
+		\textbf{Requisitos asociados} & RF-13.2 \\ 
+		\textbf{Descripción}          & Permite a los usuarios obtener todos los servicios del mapa. \\
+		\textbf{Precondición}         & El usuario se encuentra autenticado. \\  
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El sistema recibe una solicitud HTTP para obtener todos servicios del mapa.
+                \item El sistema verifica que el usuario que realiza la solicitud se encuentre autenticado.
+			\item El sistema obtiene todos los servicios del mapa.
+                \item El sistema devuelve una respuesta HTTP con un código 200 (OK) y los servicios del mapa.         
+            \end{enumerate}\\
+		\textbf{Postcondición}        & -  \\
+		\textbf{Excepciones}          &  Si el usuario no se encuentra autenticado, el 
+                    sistema devuelve una respuesta HTTP con el código 401 (No autorizado) y un mensaje.\\
+		\textbf{Importancia}          & Media \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-50  Obtener todos los servicios del mapa.}
+\end{table}
+
+% Caso de Uso 51 -> Actualizar los servicios del mapa
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-51}    & \textbf{Actualizar los servicios del mapa}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Roberto Fabián Delgado Pense \\
+		\textbf{Requisitos asociados} & RF-13.3 \\ 
+		\textbf{Descripción}          & Permite al usuario administrador actualizar un servicio del mapa. \\
+		\textbf{Precondición}         & El usuario tiene permisos de administrador. \\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+                \item El sistema verifica que el usuario que realiza la solicitud se encuentre autenticado.
+			\item El usuario ha proporcionado un identificador único (UUID), de servicio existente.
+                \item El sistema extrae el nombre, latitud, longitud, tipo, horas disponible y teléfono.
+                \item El sistema actualiza los datos del servicio con los nuevos valores proporcionados en la base de datos.
+                \item El sistema devuelve una respuesta HTTP con un código 200 (OK) y un mensaje.
+            \end{enumerate}\\
+		\textbf{Postcondición}        & El servicio del mapa se actualiza correctamente en la base de datos.\\
+		\textbf{Excepciones}          & 
+            \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+   			\item Si el usuario no se encuentra autenticado, o no es del tipo usuario administrador, el sistema devuelve una                 respuesta HTTP con un código 401 (No autorizado) y un mensaje.
+                \item   Si el servicio no se encuentra en la base de datos, el sistema devuelve un                           una respuesta HTTP con un código 404 (No encontrado) y un mensaje. 
+                \item Si ocurre un error al actualizar el servicio, el sistema devuelve una respuesta con código de estado 500 (Error interno del servidor) y un mensaje.
+            \end{enumerate}\\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-51 Actualizar los servicios del mapa.}
+\end{table}
+
+% Caso de Uso 52 -> Eliminar un servicio del mapa
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-52}    & \textbf{Eliminar un servicio del mapa}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Roberto Fabián Delgado Pense \\
+		\textbf{Requisitos asociados} & RF-13.4 \\ 
+		\textbf{Descripción}          & Permite al usuario administrador eliminar un servicio del mapa. \\
+		\textbf{Precondición}         & El usuario ha proporcionado un identificador único (UUID) de servicio existente.\\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El sistema recibe una solicitud HTTP para eliminar un servicio del mapa.
+                   \item El sistema verifica que el usuario que realiza la solicitud se encuentre autenticado y tenga el permiso de usuario administrador.
+			\item El sistema extrae el identificador único (UUID) del servicio desde la URL de la solicitud.
+                \item El sistema busca en la base de datos el servicio usando el indentificador único (UUID).
+                \item El sistema elimina el servicio de la base de datos.
+                \item El sistema devuelve una respuesta HTTP con un código 200 (OK) y un mensaje.
+            \end{enumerate}\\
+		\textbf{Postcondición}        & El servicio fue eliminado de la base de datos.\\
+		\textbf{Excepciones}          & 
+            \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+   			\item Si el usuario no se encuentra autenticado, o no es usuario administrador, el sistema devuelve una                 respuesta HTTP con un código 401 (No autorizado) y un mensaje.
+                \item   Si el servicio no se encuentra en la base de datos, el sistema devuelve un                           una respuesta HTTP con un código 404 (No encontrado) y un mensaje. 
+                \item Si ocurre un error al eliminar el servicio, el sistema devuelve una respuesta con código de estado 500 (Error interno del servidor) y un mensaje
+            \end{enumerate}\\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-52 Eliminar un servicio del mapa.}
+\end{table}
+
+% Caso de Uso 53 -> Chatbot
+\begin{table}[p]
+	\centering
+	\begin{tabularx}{\linewidth}{ p{0.21\columnwidth} p{0.71\columnwidth} }
+		\toprule
+		\textbf{CU-53}    & \textbf{Chatbot}\\
+		\toprule
+		\textbf{Versión}              & 1.0    \\
+		\textbf{Autor}                & Roberto Fabián Delgado Pense \\
+		\textbf{Requisitos asociados} & RF-14.1 \\ 
+		\textbf{Descripción}          & Permite a cualquier usuario interactuar con el chatbot. \\
+		\textbf{Precondición}         & -\\
+		\textbf{Acciones}             &
+		\begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+			\item El sistema recibe una solicitud HTTP con una pregunta del usuario.
+                \item El sistema devuelve una respuesta HTTP con un código 200 (OK) y la respuesta.
+            \end{enumerate}\\
+		\textbf{Postcondición}        & -\\
+		\textbf{Excepciones}          & 
+            \begin{enumerate}
+			\def\labelenumi{\arabic{enumi}.}
+			\tightlist
+                \item Si ocurre un error al eliminar el servicio, el sistema devuelve una respuesta con código de estado 500 (Error interno del servidor) y un mensaje.
+            \end{enumerate}\\
+		\textbf{Importancia}          & Alta \\
+		\bottomrule
+	\end{tabularx}
+	\caption{CU-53 Chatbot}
+\end{table}

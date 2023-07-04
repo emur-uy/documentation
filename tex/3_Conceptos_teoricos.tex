@@ -1,0 +1,60 @@
+\capitulo{3}{Conceptos teóricos}
+
+El propósito de esta sección es establecer un marco de referencia para el proyecto a partir de los conceptos teóricos básicos relacionados con las tecnologías y recursos que se utilizaron a lo largo del mismo.
+
+\section{Aplicación móvil}
+Una aplicación móvil es un software diseñado para ser utilizado en dispositivos móviles como smartphones o tablets. Las aplicaciones móviles tienen un mejor rendimiento y acceso a características del dispositivo, mientras que las aplicaciones web son más fáciles de desarrollar y mantener \cite{art:native_apps_vs_mobile_apps}. Sin embargo, el desarrollo de aplicaciones móviles presenta desafíos como la compatibilidad con diferentes dispositivos y sistemas operativos, y la seguridad de los datos \cite{art:challenges_and_best_practices}. En este sentido, el desarrollo de una aplicación móvil es un proceso que se compone de las siguientes etapas:
+
+\begin{itemize}
+\item \textbf{Análisis de requerimientos}: En este paso se identifican y documentan las necesidades del cliente y se definen los requerimientos de la aplicación, siendo este análisis una actividad crítica que establece la base para el desarrollo exitoso del software \cite{book:ingenieria_del_software}.
+
+\item \textbf{Diseño de la arquitectura}: En este paso se define la estructura de la aplicación, incluyendo la interacción entre las diferentes partes. Se diseñan la interfaz de usuario, la arquitectura del software y la base de datos. El diseño de la arquitectura es una parte crucial del desarrollo de una aplicación móvil \cite{art:mobile_application_development}.
+
+\item \textbf{Desarrollo de la aplicación}: En este paso se escribe el código y se implementa la aplicación, siguiendo el diseño definido anteriormente. El desarrollo de la aplicación es un proceso iterativo que involucra la implementación, prueba y corrección de errores \cite{art:asana_proceso_desarrollo}. Es el proceso de traducir el diseño en un programa ejecutable \cite{book:ingenieria_software_pearson}.
+
+\item \textbf{Pruebas de la aplicación}: En este paso se realizan pruebas exhaustivas de la aplicación para detectar y corregir errores. Se evalúa la calidad de la aplicación mediante pruebas funcionales y de rendimiento. Las pruebas son una parte fundamental del proceso de desarrollo \cite{book:tipos_pruebas_funcionales}.
+
+\item \textbf{Lanzamiento de la aplicación}: En este paso se lanza la aplicación al mercado. El lanzamiento es un proceso crítico que involucra la promoción y distribución de la aplicación a los usuarios finales \cite{art:asana_proceso_desarrollo}.
+
+\end{itemize}
+
+\section{API}
+API es el acrónimo para ‘Application Programming Interface’, con lo cual se hace referencia a un conjunto de reglas, protocolos y herramientas que permiten la comunicación entre diferentes aplicaciones y sistemas de software \cite{art:architectural_styles} para qué estas puedan enviar y recibir datos entre ellas de manera estandarizada y segura. Así, una API es una especificación de cómo se deben comunicar dos componentes de software \cite{book:restful_webservices_allamaraju}. Lo anterior implica que una API es la interfaz de programación de aplicaciones que permite a los desarrolladores acceder y utilizar los datos y funcionalidades de una aplicación sin tener que conocer todos los detalles de su implementación.
+En este sentido, las APIs son una de las herramientas más importantes para la creación de aplicaciones web y móviles \cite{art:designing_web_api}. El uso de API se ha vuelto cada vez más popular en los últimos años debido a su capacidad para mejorar la interoperabilidad y la eficiencia en el desarrollo de aplicaciones. Ahora, el desarrollo de una API es un proceso que implica varios pasos y fundamentos teóricos importantes, los cuales se describirán a continuación \cite{art:architectural_styles}:
+
+\begin{itemize}
+\item \textbf{Definición de los requisitos}: Antes de comenzar el desarrollo de una API, es importante definir los requisitos que debe cumplir. Esto incluye identificar los casos de uso, las funcionalidades que se necesitan implementar y los tipos de datos que van a ser intercambiados a través de la API.   
+
+\item \textbf{Diseño de la arquitectura}: Una vez que se han definido los requisitos, es necesario diseñar la arquitectura de la API. Esto implica decidir qué tecnologías se van a utilizar, cómo se van a estructurar los componentes de la API y cómo se van a gestionar las peticiones y respuestas.
+
+\item \textbf{Implementación}: Se codifica la lógica de negocio, se crean los endpoints y se configuran los servidores para que puedan manejar las peticiones y respuestas de la API. Por otro lado, la implementación de una API debe ser escalable y capaz de manejar grandes volúmenes de peticiones y respuestas. \cite{art:architectural_styles}.
+
+\item \textbf{Prueba y depuración}: Una vez que la API ha sido implementada, es necesario probarla y depurarla. Esto implica verificar que se cumplen los requisitos, que la API es segura y que funciona correctamente en distintos entornos y situaciones. La seguridad de la API es un aspecto crítico que debe ser tenido en cuenta durante todo el proceso de desarrollo. Es necesario implementar medidas de seguridad como la autenticación y la autorización para proteger los datos y prevenir ataques malintencionados \cite{book:beatiful_code}.
+
+\item \textbf{Documentación}: Finalmente, es importante documentar la API para que los desarrolladores puedan entender cómo utilizarla correctamente. La documentación debe incluir una descripción de los endpoints, los parámetros y los tipos de datos que se pueden intercambiar a través de la API, así como también ejemplos de código para que los desarrolladores puedan entender cómo utilizar la API en su código \cite{book:restful_webservices_richardson}.
+
+\end{itemize}
+
+\section{APIs RESTful}
+Una API RESTful (Representational State Transfer) es un conjunto de reglas y restricciones para crear servicios web que sean escalables, flexibles y fáciles de mantener. Utiliza el protocolo HTTP para definir las operaciones y los recursos a los que se accede a través de la API. A este respecto, la arquitectura REST es un estilo arquitectónico que se utiliza para diseñar sistemas distribuidos en la web. Se basa en el uso de recursos identificados por URLs y en la manipulación de estos recursos a través de los métodos HTTP \cite{book:restful_webservices_richardson}.
+En términos generales, una API RESTful funciona mediante solicitudes HTTP que se envían a través de Internet. Estas solicitudes pueden ser de diferentes tipos, como GET, POST, PUT, PATCH, DELETE, entre otros, y se utilizan para realizar operaciones específicas en los recursos de la API. Los recursos se identifican mediante URLs, y los datos se transfieren en formato JSON o XML \cite{art:google_app_engine}.
+Una API RESTful es una interfaz de programación de aplicaciones que sigue los principios de REST y que permite a los desarrolladores acceder a los recursos de una aplicación a través de Internet \cite{art:architectural_styles}. En este sentido, la arquitectura REST se basa en el principio de que cada recurso de una aplicación debe tener una URL única y que se deben utilizar los métodos HTTP adecuados para acceder a ellos. De esta manera, se consigue una mayor escalabilidad y una mejor separación entre el cliente y el servidor.
+
+\section{JSON}
+JSON (JavaScript Object Notation) es un formato de intercambio de datos utilizado para transmitir información estructurada a través de una red por lo que se utiliza principalmente en aplicaciones web y móviles, como por ejemplo en el desarrollo de APIs RESTful, debido a su simplicidad, flexibilidad, ligereza y su capacidad para representar datos estructurados de una manera fácil de entender. 
+Otras de sus ventajas, son su facilidad de uso, la capacidad de ser leído por cualquier lenguaje de programación, su tamaño reducido en comparación con otros formatos de intercambio de datos y el hecho de que es un formato abierto y estándar \cite{art:comparision_json_xml}. 
+Por otra parte, algunas desventajas son su falta de soporte para algunos tipos de datos complejos y su dependencia de un parser para su interpretación.
+En este sentido, JSON es un formato de texto que es completamente independiente de cualquier lenguaje de programación, pero utiliza convenciones que son familiares para los programadores de la familia de lenguajes C, incluyendo Java, JavaScript, Perl, Python, y muchos otros \cite{art:json_media_type}. JSON es una alternativa más ligera y fácil de usar a XML para la transferencia de datos estructurados entre sistemas \cite{art:google_app_engine}.
+
+\section{Git y GitHub}
+Git es un sistema de control de versiones distribuido que permite a los programadores gestionar cambios en el código fuente de un proyecto de software de manera colaborativa, mientras que GitHub es una plataforma en línea que se utiliza para alojar repositorios de Git y para facilitar la colaboración en proyectos de software \cite{art:pro_git}.
+El funcionamiento de Git se basa en el control de versiones mediante la creación de ramas (branches) que permiten trabajar en diferentes versiones del código de manera independiente y luego fusionarlos. Por su parte, GitHub proporciona herramientas para la gestión de proyectos, como la creación de issues, pull requests y colaboración en equipo.
+
+\section{Base de datos}
+Una base de datos es un conjunto de datos interrelacionados, estructurados y organizados que se almacenan en un sistema informático para su uso en una aplicación específica \cite{book:base_de_datos_connolly}. Sus componentes principales son el software de gestión de bases de datos, el hardware (como servidores y discos duros) y los datos en sí mismos \cite{book:base_de_datos_coronel}. 
+Las bases de datos se utilizan para almacenar y gestionar grandes cantidades de información  empresarial, científica y personal, por tanto sus aplicaciones son muy variadas y van desde sistemas de gestión de inventarios hasta sistemas financieros y de recursos humanos. El funcionamiento de una base de datos se sustenta en la adición, modificación y eliminación de información a través de un lenguaje de consulta estructurado SQL (Structured Query Language) \cite{book:base_de_datos_ramakrishnan}. Los datos se organizan en tablas y se relacionan entre sí mediante claves primarias y foráneas. 
+
+\section{Docker}
+Docker es una plataforma de contenedores de software que permite a los desarrolladores empaquetar y distribuir aplicaciones junto con sus dependencias, de manera consistente y confiable en diferentes entornos, en un paquete portátil llamado contenedor \cite{art:docker_containers}. En este sentido, los contenedores son unidades de software que incluyen todo lo necesario para ejecutar una aplicación, incluidas bibliotecas, dependencias y configuraciones \cite{art:docker_boettinger}. A este respecto, el uso de contenedores Docker puede mejorar la eficiencia del desarrollo de software al permitir la creación de entornos de desarrollo aislados y reproducibles. 
+Los componentes principales de Docker son el daemon de Docker, la CLI de Docker y el Docker Hub. El daemon de Docker es el servidor que ejecuta los contenedores, la CLI de Docker es la herramienta de línea de comandos que se utiliza para interactuar con el daemon de Docker y el Docker Hub es el registro de imágenes de Docker en línea. Las aplicaciones de Docker incluyen la creación de entornos de desarrollo reproducibles, la implementación de aplicaciones en la nube y la creación de entornos de prueba y producción consistentes.
+Entre las ventajas de Docker se encuentran la portabilidad, la escalabilidad, la eficiencia y la compatibilidad con múltiples sistemas operativos \cite{art:docker_microsoft}. Sin embargo, también existen desventajas, como la complejidad de la configuración y la posible vulnerabilidad a ataques de seguridad \cite{art:docker_microsoft}.
